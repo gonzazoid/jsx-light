@@ -5,9 +5,10 @@
   "main": "build/elements.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "rm -rf build/client/* && webpack -c --config webpack.client.js && cp build/elements.js dist/public/",
-    "build": "cp src/assets/index.html dist/public/ && npm run client",
-    "clean": "rm -rf build/* && rm -rf dist/*"
+    "mkdirs" : "mkdir build && mkdir dist && mkdir dist/public",
+    "client": "npm run clean && npm run mkdirs && rm -rf build/client/* && webpack -c --config webpack.client.js && cp build/elements.js dist/public/",
+    "build": "npm run clean && npm run mkdirs && cp src/assets/index.html dist/public/ && npm run client",
+    "clean": "rm -rf build && rm -rf dist"
   },
   "author": "Timur Appaev alloaolla@gmail.com",
   "license": "MIT",
