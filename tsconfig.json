@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "jsx": "react"
+       ,"jsxFactory": "dom.createElement"
+       ,"lib": ["ES2017", "DOM"]
+       ,"target": "ESNext"
+       ,"module": "commonjs"
+       ,"removeComments": true
+       ,"noImplicitAny": false
+    }
+}
